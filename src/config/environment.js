@@ -1,4 +1,5 @@
 //项目环境部署模块
+console.log(process.env);
 let resultConf = [];
 /**
  * 公共配置

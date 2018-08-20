@@ -4,17 +4,17 @@
 * @Desc :   此文件存放所有第三方插件集合
 */
 import axios from 'axios'
-import gbFun from "@/config/global.js"
+import gbObj from "@/config/global.js"
 
 axios.defaults.withCredentials = true;
 export let Ajax = (obj) => {
-    console.log(gbFun);
+    console.log(gbObj);
     let type = obj.type || 'post';
     let useFormData = obj.useFormData || false;
-    let params = type == 'post' ? (useFormData ? obj.data : gbFun.Utils.jsonToString(obj.data)) : {
+    let params = type == 'post' ? (useFormData ? obj.data : gbObj.Utils.jsonToString(obj.data)) : {
         params: obj.data
     };
-    axios[type](gbFun.Urllists[obj.key], params)
+    axios[type](gbObj.Urllists[obj.key], params)
         .then(function (response) {
             if (typeof response.data == "string" || !response.data) {
                 response.data = JSON.parse(response.data || "{}");

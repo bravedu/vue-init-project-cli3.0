@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    //此处为了编译测试环境代码，做此配置，调取环境模式文件 .env.release
+    "release_build": "vue-cli-service build --mode release"
   },
   "dependencies": {
     "axios": "^0.18.0",

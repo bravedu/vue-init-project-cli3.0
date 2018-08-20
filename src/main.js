@@ -8,14 +8,14 @@ import gbObj from './config/global'
 import pgObj from './config/plugins'
 
 //加载工具库
-import utilFun from './config/util'
+import utilObj from './config/util'
 // //加载公共样式,此模块根据个人使用调整
 // import './styles/common.less'
 
 
 Vue.config.productionTip = false
 //注册全局变量
-Vue.prototype.$utilFun = utilFun;
+Vue.prototype.$utilObj = utilObj;
 Vue.prototype.$gbObj   = gbObj;
 Vue.prototype.$pgObj = pgObj;
 
