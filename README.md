@@ -1,4 +1,4 @@
-# my_test_pro
+# vue-init-project-cli3.0
 
 ## Project setup
 ```
